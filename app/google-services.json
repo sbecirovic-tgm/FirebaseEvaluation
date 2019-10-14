@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "730368300239",
+    "firebase_url": "https://seniorenappevaluation-e2aa9.firebaseio.com",
+    "project_id": "seniorenappevaluation-e2aa9",
+    "storage_bucket": "seniorenappevaluation-e2aa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730368300239:android:eaee702a62d7c9421dd3ba",
+        "android_client_info": {
+          "package_name": "com.example.firebaseeva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730368300239-arl9frnad5ld465ir0pl4pt1inre659i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaseeva",
+            "certificate_hash": "fbde3ef983a663e02798baeccd4fcce46aa1c847"
+          }
+        },
+        {
+          "client_id": "730368300239-r6ke8tnmht19ong839hge6nccidijibn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbHngxGrsr2J0zWrfQmYKyXeP1Fx9B3W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730368300239-r6ke8tnmht19ong839hge6nccidijibn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
