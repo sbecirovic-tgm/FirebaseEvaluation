@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
-    EditText email, passwort;
+    EditText email, passwort, firstname, lastname;
     Button login;
+    Map<String, Object> user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-
+        user = new HashMap<>();
         email = (EditText) findViewById(R.id.emailEditText);
         passwort = (EditText) findViewById(R.id.passwordEditText);
+        firstname = (EditText) findViewById(R.id.firstName);
+        lastname = (EditText) findViewById(R.id.lastName);
         login = (Button) findViewById(R.id.loginBtn);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,9 +72,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void signIn() {
-        String emailString = email.getText().toString();
+        final String emailString = email.getText().toString();
         String passwordString = passwort.getText().toString();
+        final String firstnameString = firstname.getText().toString();
+        final String lastnameString = lastname.getText().toString();
 
         if(TextUtils.isEmpty(emailString) || TextUtils.isEmpty(passwordString)) {
             Toast.makeText(MainActivity.this, "Fields are empty", Toast.LENGTH_SHORT).show();
@@ -79,7 +85,12 @@ public class MainActivity extends AppCompatActivity {
             mAuth.signInWithEmailAndPassword(emailString, passwordString).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (!task.isSuccessful()) {
+                    if (task.isSuccessful()) {
+                        user.put("first", firstnameString);
+                        user.put("last", lastnameString);
+                        user.put("email", emailString);
+                        db.collection("users").add(user);
+                    }else {
                         Toast.makeText(MainActivity.this, "Sign In Problem", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -98,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void addToDB() {
         // Create a new user with a first and last name
-        Map<String, Object> user = new HashMap<>();
         user.put("first", "Ada");
         user.put("last", "Lovelace");
         user.put("born", 1815);
