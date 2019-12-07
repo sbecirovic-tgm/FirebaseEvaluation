@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Interessen">
+
+    <Spinner
+        android:id="@+id/ausflugSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ausflugTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Ausflug:"
+        app:layout_constraintEnd_toStartOf="@+id/ausflugSpinner"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bewegungTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="32dp"
+        android:text="Bewegung:"
+        app:layout_constraintEnd_toStartOf="@+id/bewegungSpinner"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ausflugTextView" />
+
+    <TextView
+        android:id="@+id/bildungTextView"
+        android:layout_width="60dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Bildung:"
+        app:layout_constraintEnd_toStartOf="@+id/bildungSpinner"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bewegungTextView" />
+
+    <TextView
+        android:id="@+id/mahlzeitzTextView"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Mahlzeit: "
+        app:layout_constraintEnd_toStartOf="@+id/mahlzeitSpinner"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bildungTextView" />
+
+    <TextView
+        android:id="@+id/vortragTextView"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Vortrag:"
+        app:layout_constraintEnd_toStartOf="@+id/vortragSpinner"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/musikTanzTextView" />
+
+    <TextView
+        android:id="@+id/musikTanzTextView"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Musik und Tanz:"
+        app:layout_constraintEnd_toStartOf="@+id/musikTanzSpinner"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mahlzeitzTextView" />
+
+    <Spinner
+        android:id="@+id/bewegungSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ausflugSpinner" />
+
+    <Spinner
+        android:id="@+id/bildungSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bewegungSpinner" />
+
+    <Spinner
+        android:id="@+id/mahlzeitSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bildungSpinner" />
+
+    <Spinner
+        android:id="@+id/musikTanzSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mahlzeitSpinner" />
+
+    <Spinner
+        android:id="@+id/vortragSpinner"
+        android:layout_width="128dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/musikTanzSpinner" />
+
+    <Button
+        android:id="@+id/speichernBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Speichern"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vortragSpinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
