@@ -83,36 +83,38 @@ public class Interessen extends AppCompatActivity {
                     case R.id.mahlzeitSpinner:
                         interresen.put("mahlzeit", true);;
                     case R.id.vortragSpinner:
-                        interresen.put("mahlzeit", true);
+                        interresen.put("vortrag", true);
                     case R.id.ausflugSpinner:
-                        interresen.put("mahlzeit", true);
+                        interresen.put("ausflug", true);
                     case R.id.bewegungSpinner:
-                        interresen.put("mahlzeit", true);
+                        interresen.put("bewegung", true);
                     case R.id.bildungSpinner:
-                        interresen.put("mahlzeit", true);
+                        interresen.put("bildung", true);
                     case R.id.musikTanzSpinner:
-                        interresen.put("mahlzeit", true);
+                        interresen.put("musikTanz", true);
                 }
             }else if ("false".equals(spinner.getSelectedItem())) {
                 switch (spinner.getId()) {
                     case R.id.mahlzeitSpinner:
                         interresen.put("mahlzeit", false);
                     case R.id.vortragSpinner:
-                        interresen.put("mahlzeit", false);
+                        interresen.put("vortrag", false);
                     case R.id.ausflugSpinner:
-                        interresen.put("mahlzeit", false);
+                        interresen.put("ausflug", false);
                     case R.id.bewegungSpinner:
-                        interresen.put("mahlzeit", false);
+                        interresen.put("bewegung", false);
                     case R.id.bildungSpinner:
-                        interresen.put("mahlzeit", false);
+                        interresen.put("bildung", false);
                     case R.id.musikTanzSpinner:
-                        interresen.put("mahlzeit", false);
+                        interresen.put("musikTanz", false);
                 }
             }
         }
 
-        db.collection("Profil").add(user);
-        db.collection("Profil").document(user.toString()).set(interresen).addOnSuccessListener(new OnSuccessListener<Void>() {
+
+        //db.collection("Profil").document(user.getEmail()).set(user);
+        db.collection("Profil").document(user.getEmail()).update("interessen", interresen)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 startActivity(new Intent(Interessen.this, AccountActivity.class));
