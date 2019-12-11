@@ -19,15 +19,18 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.io.Serializable;
 import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText firstName, lastName, email, password, passwortWh;
+    EditText firstName, lastName, email, password, passwortWh, alterEingabe;
     Button registerBtn;
     FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     FirebaseFirestore db;
+    Map<String, Object> userData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,8 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(RegisterActivity.this, Interessen.class));
+                    startActivity(new Intent(RegisterActivity.this, Interessen.class)
+                    .putExtra("map", (Serializable) userData));
                 }
             }
         };
@@ -51,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.emailInput);
         password = (EditText) findViewById(R.id.passwortInput);
         passwortWh = (EditText) findViewById(R.id.wiederholung);
+        alterEingabe = (EditText) findViewById(R.id.alter);
 
         registerBtn = (Button) findViewById(R.id.register);
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        userData = new HashMap<>();
     }
 
     @Override
@@ -77,6 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
         final String passwordWhString = passwortWh.getText().toString();
         final String firstnameString = firstName.getText().toString();
         final String lastnameString = lastName.getText().toString();
+        final int alterString = Integer.parseInt(this.alterEingabe.getText().toString());
 
 
         if(TextUtils.isEmpty(emailString) || TextUtils.isEmpty(passwordString)) {
@@ -89,7 +96,14 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         FirebaseUser user = firebaseAuth.getCurrentUser();
-                        db.collection("Profil").document(user.getEmail()).set(user);
+                        Map<String, String> name = new HashMap<>();
+                        name.put("vorname", firstnameString);
+                        name.put("nachname", lastnameString);
+                        userData.put("name", name);
+                        userData.put("BenutzerName", firstnameString.toLowerCase()+""+lastnameString);
+                        userData.put("eMailAdresse", emailString);
+                        userData.put("alter", alterString);
+                        db.collection("Profil").document(user.getEmail()).set(userData);
                     }
                 }
             });

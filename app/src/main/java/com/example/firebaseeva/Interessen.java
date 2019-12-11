@@ -111,8 +111,6 @@ public class Interessen extends AppCompatActivity {
             }
         }
 
-
-        //db.collection("Profil").document(user.getEmail()).set(user);
         db.collection("Profil").document(user.getEmail()).update("interessen", interresen)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
