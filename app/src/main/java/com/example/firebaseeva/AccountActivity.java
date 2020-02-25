@@ -13,7 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class AccountActivity extends AppCompatActivity {
 
-    Button logout;
+    Button logout, veranst;
     TextView txtView;
 
     @Override
@@ -32,10 +32,22 @@ public class AccountActivity extends AppCompatActivity {
                 logOut();
             }
         });
+
+        veranst = (Button) findViewById(R.id.klubBtn);
+        veranst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                veranstAnzeigen();
+            }
+        });
     }
 
     public void logOut() {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(AccountActivity.this, MainActivity.class));
+    }
+
+    public void veranstAnzeigen() {
+        startActivity(new Intent(AccountActivity.this, KlubActivity.class));
     }
 }
