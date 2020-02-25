@@ -4,86 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/firstName"
+    <TextView
+        android:id="@+id/textView_Vorname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Vorname"
+        android:textColor="@color/Orange_corporate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_Vorname"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_Vorname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/register_kachel"
         android:ems="10"
-        android:hint="Vorname"
+        android:hint="Max"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/lastName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.993" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_Vorname" />
 
-    <EditText
-        android:id="@+id/lastName"
+    <TextView
+        android:id="@+id/textView_Nachname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nachname"
+        android:textColor="@color/Orange_corporate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_Vorname"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Vorname" />
+
+    <EditText
+        android:id="@+id/editText_Nachname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/register_kachel"
         android:ems="10"
-        android:hint="Nachname"
+        android:hint="Mustermann"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/emailInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Nachname" />
 
-    <EditText
-        android:id="@+id/emailInput"
+    <TextView
+        android:id="@+id/textView_Email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="E-Mail"
+        android:textColor="@color/Orange_corporate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_Nachname"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Nachname" />
+
+    <EditText
+        android:id="@+id/editText_Email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/register_kachel"
         android:ems="10"
-        android:hint="Email"
+        android:hint="maxmustermann@outlook.com"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/passwortInput"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Email" />
 
-    <EditText
-        android:id="@+id/passwortInput"
+    <TextView
+        android:id="@+id/textView_Passwort1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/wiederholung"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        android:text="Passwort"
+        android:textColor="@color/Orange_corporate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_Email"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Email" />
 
     <EditText
-        android:id="@+id/wiederholung"
+        android:id="@+id/editText_Passwort1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/register_kachel"
+        android:ems="10"
+        android:hint="Passwort eingeben"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Passwort1" />
+
+    <TextView
+        android:id="@+id/textView_Passwort2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
+        android:text="Passwort bestätigen"
+        android:textColor="@color/Orange_corporate"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText_Passwort1"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Passwort1" />
+
+    <EditText
+        android:id="@+id/editText_Passwort2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/register_kachel"
         android:ems="10"
-        android:hint="Passwort Wiederholen"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/alter"
+        android:hint="Passwort erneut eingeben"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Passwort2" />
 
     <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_registrieren"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="272dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/red_button"
         android:text="Registrieren"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Passwort2" />
 
-    <EditText
-        android:id="@+id/alter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Alter"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

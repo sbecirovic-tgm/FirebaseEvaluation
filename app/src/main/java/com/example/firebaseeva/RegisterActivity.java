@@ -16,7 +16,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.Serializable;
@@ -50,14 +49,13 @@ public class RegisterActivity extends AppCompatActivity {
             }
         };
 
-        firstName = (EditText) findViewById(R.id.firstName);
-        lastName = (EditText) findViewById(R.id.lastName);
-        email = (EditText) findViewById(R.id.emailInput);
-        password = (EditText) findViewById(R.id.passwortInput);
-        passwortWh = (EditText) findViewById(R.id.wiederholung);
-        alterEingabe = (EditText) findViewById(R.id.alter);
+        firstName = (EditText) findViewById(R.id.editText_Vorname);
+        lastName = (EditText) findViewById(R.id.editText_Nachname);
+        email = (EditText) findViewById(R.id.editText_Email);
+        password = (EditText) findViewById(R.id.editText_Passwort1);
+        passwortWh = (EditText) findViewById(R.id.editText_Passwort2);
 
-        registerBtn = (Button) findViewById(R.id.register);
+        registerBtn = (Button) findViewById(R.id.button_registrieren);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
         final String passwordWhString = passwortWh.getText().toString();
         final String firstnameString = firstName.getText().toString();
         final String lastnameString = lastName.getText().toString();
-        final int alterString = Integer.parseInt(this.alterEingabe.getText().toString());
+        //final int alterString = Integer.parseInt(this.alterEingabe.getText().toString());
 
 
         if(TextUtils.isEmpty(emailString) || TextUtils.isEmpty(passwordString)) {
@@ -102,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
                         userData.put("name", name);
                         userData.put("BenutzerName", firstnameString.toLowerCase()+""+lastnameString);
                         userData.put("eMailAdresse", emailString);
-                        userData.put("alter", alterString);
+                        //userData.put("alter", alterString);
                         db.collection("Profil").document(user.getEmail()).set(userData);
                     }
                 }
