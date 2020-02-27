@@ -34,7 +34,7 @@ public class AnmeldeActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(AnmeldeActivity.this, AccountActivity.class));
+                    startActivity(new Intent(AnmeldeActivity.this, HomeActivity.class));
                 }
             }
         };
@@ -81,7 +81,7 @@ public class AnmeldeActivity extends AppCompatActivity {
     }
 
     public void updateUI() {
-        startActivity(new Intent(this, AccountActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
     }
 
 }

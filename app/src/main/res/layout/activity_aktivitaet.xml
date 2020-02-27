@@ -6,12 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Aktivitaet">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_neu" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/aktivitaet_background"
@@ -24,13 +34,13 @@
 
     <Button
         android:id="@+id/button_home"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/ic_home_black_24dp"
-        android:text="Button"
+        android:onClick="home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView" />
@@ -40,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text=""
+        android:text="Bingo"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -55,7 +65,7 @@
         android:layout_marginTop="32dp"
         android:drawableStart="@drawable/ic_date_range_white"
         android:drawablePadding="8dp"
-        android:text=""
+        android:text=" 26.02.2020"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -69,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:drawableStart="@drawable/ic_access_time_white"
-        android:text=""
+        android:text="12:30-15:00"
         android:textColor="@android:color/white"
         android:drawablePadding="8dp"
         android:textSize="30sp"
@@ -84,7 +94,7 @@
         android:drawableStart="@drawable/ic_location_on_white"
         android:drawablePadding="8dp"
         android:maxHeight="100dp"
-        android:text=""
+        android:text="Porzellangasse 14\n1090 Wien"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -98,10 +108,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:drawableStart="@drawable/ic_phone_white"
-        android:text=""
+        android:text="0699 123 456 78"
         android:textColor="@android:color/white"
         android:textSize="30sp"
         android:drawablePadding="8dp"
         app:layout_constraintStart_toStartOf="@+id/textView_datum"
         app:layout_constraintTop_toBottomOf="@+id/textView_ort" />
+
+    <Button
+        android:id="@+id/button_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/klubs_kachel"
+        android:onClick="route"
+        android:text="Auf der Karte anzeigen"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView_datum"
+        app:layout_constraintTop_toBottomOf="@+id/textView_tele"
+        app:layout_constraintVertical_bias="0.75" />
 </androidx.constraintlayout.widget.ConstraintLayout>

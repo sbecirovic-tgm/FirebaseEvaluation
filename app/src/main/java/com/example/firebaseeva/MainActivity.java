@@ -19,8 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.*;
-
 public class MainActivity extends AppCompatActivity {
 
     FirebaseFirestore db;
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if(firebaseAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(MainActivity.this, AccountActivity.class));
+                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
                 }
             }
         };
@@ -83,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateUI() {
-        startActivity(new Intent(this, AccountActivity.class));
+        startActivity(new Intent(this, HomeActivity.class));
     }
 
     public void register(View view) {
