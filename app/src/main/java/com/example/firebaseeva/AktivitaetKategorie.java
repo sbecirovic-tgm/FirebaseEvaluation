@@ -17,7 +17,19 @@ public class AktivitaetKategorie extends AppCompatActivity {
     }
 
     public void bewegungAnzeigen(View view) {
-        //startActivity(new Intent(AktivitaetKategorie.this, Bewegung.class));
+        startActivity(new Intent(AktivitaetKategorie.this, BewegungActivity.class));
+    }
+
+    public void musikAnzeigen(View view) {
+        startActivity(new Intent(AktivitaetKategorie.this, MusikActivity.class));
+    }
+
+    public void spielAnzeigen(View view) {
+        startActivity(new Intent(AktivitaetKategorie.this, SpielActivity.class));
+    }
+
+    public void bildungAnzeigen(View view) {
+        startActivity(new Intent(AktivitaetKategorie.this, BildungActivity.class));
     }
 
 }

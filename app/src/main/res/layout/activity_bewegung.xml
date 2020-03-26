@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KlubActivity">
+    tools:context=".BewegungActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -15,7 +15,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/aktivitaet_background"
-        app:layout_constraintBottom_toTopOf="@+id/button_home"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHome2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,17 +23,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/button_home"
+        android:id="@+id/buttonHome2"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/ic_home_black_24dp"
-        android:onClick="home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        android:onClick="home"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -64,155 +64,104 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/button_klub1"
+                android:id="@+id/button_bewegung1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub2"
+                android:id="@+id/button_bewegung2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub3"
+                android:id="@+id/button_bewegung3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub4"
+                android:id="@+id/button_bewegung4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub5"
+                android:id="@+id/button_bewegung5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub6"
+                android:id="@+id/button_bewegung6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub7"
+                android:id="@+id/button_bewegung7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
-                android:onClick="home"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub8"
+                android:id="@+id/button_bewegung8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button_klub9"
+                android:id="@+id/button_bewegung9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/button_klub10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button_klub11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button_klub12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button_klub13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button_klub14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button_klub15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/klubs_kachel"
-                android:textColor="@android:color/white"
-                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>

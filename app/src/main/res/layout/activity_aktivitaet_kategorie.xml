@@ -61,6 +61,7 @@
                 android:drawableTop="@drawable/ic_person_white"
                 android:fontFamily="sans-serif-black"
                 android:text="Musik &amp; Tanz"
+                android:onClick="musikAnzeigen"
                 android:textColor="@android:color/white"
                 android:textSize="26sp" />
         </LinearLayout>
@@ -81,6 +82,7 @@
 
                 android:fontFamily="sans-serif-black"
                 android:text="Spiel &amp; Spaß"
+                android:onClick="spielAnzeigen"
                 android:textColor="@android:color/white"
                 android:textSize="26sp" />
 
@@ -94,6 +96,7 @@
                 android:drawableTop="@drawable/ic_chat_bubble_white"
                 android:fontFamily="sans-serif-black"
                 android:text="Bildung &amp; Lernen"
+                android:onClick="bildungAnzeigen"
                 android:textColor="@android:color/white"
                 android:textSize="26sp" />
 

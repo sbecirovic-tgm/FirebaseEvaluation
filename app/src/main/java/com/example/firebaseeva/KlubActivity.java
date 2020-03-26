@@ -22,7 +22,6 @@ import java.util.Map;
 
 public class KlubActivity extends AppCompatActivity {
 
-    private TextView kname, tage, uhrzeit, adresse, telNr;
     private Button buttonArr[];
     private FirebaseFirestore db;
     private static final String ADRESSE = "adresse";
@@ -34,7 +33,7 @@ public class KlubActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        buttonArr = new Button[7];
+        buttonArr = new Button[9];
         buttonArr[0] = (Button) findViewById(R.id.button_klub1);
         buttonArr[1] = (Button) findViewById(R.id.button_klub2);
         buttonArr[2] = (Button) findViewById(R.id.button_klub3);
@@ -42,6 +41,8 @@ public class KlubActivity extends AppCompatActivity {
         buttonArr[4] = (Button) findViewById(R.id.button_klub5);
         buttonArr[5] = (Button) findViewById(R.id.button_klub6);
         buttonArr[6] = (Button) findViewById(R.id.button_klub7);
+        buttonArr[7] = (Button) findViewById(R.id.button_klub8);
+        buttonArr[8] = (Button) findViewById(R.id.button_klub9);
 
         this.getData();
     }
