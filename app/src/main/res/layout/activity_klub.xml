@@ -30,6 +30,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/ic_home_black_24dp"
+        android:onClick="home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView" />
@@ -69,7 +70,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
-                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -80,7 +80,6 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
-                android:text=""
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -131,26 +130,27 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
+                android:onClick="home"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/button_klub8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
-                android:text="Beispiel 8"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/button_klub9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/klubs_kachel"
-                android:text="Beispiel 9"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 

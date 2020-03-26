@@ -2,7 +2,9 @@ package com.example.firebaseeva;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,6 +71,10 @@ public class KlubActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void home(View view) {
+        startActivity(new Intent(KlubActivity.this, HomeActivity.class));
     }
 
 }

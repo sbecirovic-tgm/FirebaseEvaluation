@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".AktivitaetKategorie">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -28,85 +28,77 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/startseite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/startseite"
-            android:textColor="#000000"
-            android:textSize="40sp"
-            android:textScaleX="1.1"
-            />
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_aktivitaet"
+                android:id="@+id/buttonBewegung"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/aktivitaet_background"
+                android:background="@drawable/homescreen_kachel"
                 android:drawableTop="@drawable/ic_casino"
+                android:fontFamily="sans-serif-black"
                 android:maxHeight="150dp"
-                android:onClick="aktivitaetAnzeigen"
-                android:text="Aktivität"
+                android:text="Bewegung"
+                android:onClick="bewegungAnzeigen"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="26sp" />
 
             <Button
-                android:id="@+id/button_profil"
+                android:id="@+id/buttonMusik"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/aktivitaet_background"
+                android:background="@drawable/homescreen_kachel"
                 android:drawableTop="@drawable/ic_person_white"
-                android:onClick="profilAnzeigen"
-                android:text="Profil"
+                android:fontFamily="sans-serif-black"
+                android:text="Musik &amp; Tanz"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="26sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="150dp"
             android:layout_margin="10dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button_klubs"
+                android:id="@+id/buttonSpiel"
                 android:layout_width="0px"
                 android:layout_height="match_parent"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/aktivitaet_background"
-                android:drawableTop="@drawable/ic_location_city_white"
-                android:onClick="klubAnzeigen"
-                android:text="Klubs"
+                android:background="@drawable/homescreen_kachel"
+
+                android:fontFamily="sans-serif-black"
+                android:text="Spiel &amp; Spaß"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="26sp" />
 
             <Button
-                android:id="@+id/button_austausch"
+                android:id="@+id/buttonBildung"
                 android:layout_width="0px"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
-                android:background="@drawable/aktivitaet_background"
+                android:background="@drawable/homescreen_kachel"
                 android:drawableTop="@drawable/ic_chat_bubble_white"
-                android:onClick="austauschAnzeigen"
-                android:text="Austausch"
+                android:fontFamily="sans-serif-black"
+                android:text="Bildung &amp; Lernen"
                 android:textColor="@android:color/white"
-                android:textSize="30sp" />
+                android:textSize="26sp" />
+
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

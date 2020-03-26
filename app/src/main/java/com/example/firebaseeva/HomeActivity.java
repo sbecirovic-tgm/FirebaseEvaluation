@@ -9,21 +9,14 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button aktivitaetBtn, klubBtn, austauschBtn, profilBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        aktivitaetBtn = (Button) findViewById(R.id.button_aktivitaet);
-        klubBtn = (Button) findViewById(R.id.button_klubs);
-        austauschBtn = (Button) findViewById(R.id.button_austausch);
-        profilBtn = (Button) findViewById(R.id.button_profil);
     }
 
     public void aktivitaetAnzeigen(View view) {
-        startActivity(new Intent(HomeActivity.this, Aktivitaet.class));
+        startActivity(new Intent(HomeActivity.this, AktivitaetKategorie.class));
     }
     public void klubAnzeigen(View view) {
         startActivity(new Intent(HomeActivity.this, KlubActivity.class));
